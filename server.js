@@ -10,7 +10,7 @@ const ATLAS_URI = process.env.ATLAS_URI
 // Express app
 const app = express()
 
-// Cors
+// Use Cors
 app.use(cors())
 
 // Middlewares
