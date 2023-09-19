@@ -14,15 +14,15 @@ const jobSchema = new Schema({
         type: String,
         required: true
     },
-    jobCategory: {
+    jobLocation: {
         type: String,
         required: true
     },
-    jobDescription: {
+    jobSalary: {
         type: String,
         required: true
     },
-    jobStatus: {
+    jobDate: {
         type: String,
         required: true
     }
