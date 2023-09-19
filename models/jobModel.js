@@ -19,11 +19,11 @@ const jobSchema = new Schema({
         required: true
     },
     jobSalary: {
-        type: String,
+        type: Number,
         required: true
     },
     jobDate: {
-        type: String,
+        type: Date,
         required: true
     }
 }, {
