@@ -21,10 +21,6 @@ const jobSchema = new Schema({
     jobSalary: {
         type: Number,
         required: true
-    },
-    jobDate: {
-        type: Date,
-        required: true
     }
 }, {
     timestamps: true
