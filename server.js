@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 const jobRoutes = require('./routes/jobRoutes')
+const bodyParser = require('body-parser')
 
 const PORT = process.env.PORT
 const ATLAS_URI = process.env.ATLAS_URI
@@ -14,8 +15,8 @@ const app = express()
 app.use(cors())
 
 // Middlewares
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
-
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
