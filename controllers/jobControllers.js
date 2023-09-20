@@ -27,10 +27,10 @@ const getJob = async (req, res) => {
 
 // POST job
 const postJob = async (req, res) => {
-    const { jobTitle, jobCompany, jobType, jobLocation, jobSalary, jobDate } = req.body
+    const { jobTitle, jobCompany, jobType, jobLocation, jobSalary, jobDate, jobUrl } = req.body
 
     try {
-        const job = await Job.create({jobTitle, jobCompany, jobType, jobLocation, jobSalary, jobDate})
+        const job = await Job.create({jobTitle, jobCompany, jobType, jobLocation, jobSalary, jobDate, jobUrl})
         return res.status(200).json(job)
     } catch (error) {
         return res.status(400).json({error: error.message})

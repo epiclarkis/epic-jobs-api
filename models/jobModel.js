@@ -21,6 +21,9 @@ const jobSchema = new Schema({
     jobSalary: {
         type: Number,
         required: true
+    },
+    jobUrl: {
+        type: String
     }
 }, {
     timestamps: true
